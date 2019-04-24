@@ -753,14 +753,17 @@ italics {
     }
     
     .card-header {
-        flex-direction:column;    
+        flex-direction:column;
+        align-items: flex-start;
     }
     
     .contact-header {
         flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
     }
 
     .contact-header a {
-        margin: 0px 10px;
+        margin: 0px 10px 0 0;
     }
 }
