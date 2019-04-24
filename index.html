@@ -297,7 +297,7 @@
                 </div>
                 <div class="about-details">
                     <!-- TODO: add good introductory sentence -->
-                    <p>I chose to major in human factors because its all about the human side of engineering. After taking my first undergraduate class I fell in love with the human-centered and psychological aspects of intelligent interface design. Throughout my academic career, I developed a passion for usability and user experience. I also earned a minor in Aerospace Life Sciences to gain a better understanding of the physiological strain flight has on the human body. I graduated in December of 2018 and I&#39;m currently working towards a master of science in human factors with an expected graduation of May 2019. Over the summer I will be interning with <a target="_blank" href="https://mitre.org">MITRE</a> as a human centered engineer, focusing on human computer interfaces. I look forward to the knowledge and experience I will gain from this opportunity!</p>
+                    <p>I chose to major in human factors because its all about the human side of engineering. After taking my first undergraduate class I fell in love with the human-centered and psychological aspects of intelligent interface design. Throughout my academic career, I developed a passion for usability and user experience. I also earned a minor in Aerospace Life Sciences to gain a better understanding of the physiological strain flight has on the human body. I graduated in December of 2018 and I&#39;m currently working towards a master of science in human factors with an expected graduation of May 2020. Over the summer I will be interning with <a target="_blank" href="https://mitre.org">MITRE</a> as a human centered engineer, focusing on human computer interfaces. I look forward to the knowledge and experience I will gain from this opportunity!</p>
                 </div>
                 <div class="interests-icons">
                     <div class="interests-title">
@@ -369,6 +369,14 @@
         $(window).resize(function () {
             if(window.innerWidth>600) {
                 closeNavbar();
+                scrollspeed = 300;
+            } else {
+                scrollspeed = 0;
+            }
+        });
+        
+        $(document).ready(function() {
+            if(window.innerWidth>600) {
                 scrollspeed = 300;
             } else {
                 scrollspeed = 0;
