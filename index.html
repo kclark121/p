@@ -24,7 +24,7 @@
                 <div class="nav-item about-button" tabindex="5">
                     <p>About Me</p>
                 </div>
-                <div class="nav-item" tabindex="6">
+                <div class="nav-item contact-button" tabindex="6">
                     <p>Contact</p>
                 </div>
             </div>
@@ -347,7 +347,7 @@
                 </div>
             </div>
         </div>
-        <div class="section contact">
+        <div id="#contact" class="section contact">
             <div class="contact-details">
                 <div class="contact-icons">
                     <div class="icon">
@@ -401,6 +401,13 @@
                 scrollTop: $("#about").offset().top-49
             }, scrollspeed);
         });
+        
+        $(".contact-button").click(function () {
+            closeNavbar();
+            $([document.documentElement, document.body]).stop().animate({
+                scrollTop: $("#contact").offset().top-49
+            }, scrollspeed);
+        });
 
         $(document).on('keypress',function(e) {
             var hamburger = document.querySelector(".hamburger-container");
@@ -408,6 +415,7 @@
             var project_button = document.querySelector(".projects-button");
             var experience_button = document.querySelector(".experience-button");
             var about_button = document.querySelector(".about-button");
+            var contact_button = document.querySelector(".contact-button");
             if(e.which == 13) {
                 switch(document.activeElement) {
                     case(hamburger): {
@@ -432,6 +440,11 @@
                     case(about_button): {
                         $([document.documentElement, document.body]).stop().animate({
                             scrollTop: $("#about").offset().top-49
+                        }, scrollspeed);
+                    } break;
+                    case(contact_button): {
+                        $([document.documentElement, document.body]).stop().animate({
+                            scrollTop: $("#contact").offset().top-49
                         }, scrollspeed);
                     } break;
                 }
