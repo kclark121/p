@@ -751,4 +751,16 @@ italics {
         text-align: center;
         width: 65%;
     }
+    
+    .card-header {
+        flex-direction:column;    
+    }
+    
+    .contact-header {
+        flex-direction: row;
+    }
+
+    .contact-header a {
+        margin: 0px 10px;
+    }
 }
